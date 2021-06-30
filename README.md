@@ -1,6 +1,5 @@
 # Python linted repo
 
-It's just a (mainly pedagogic) example of a repo that lints markdown as well as
-code files.
+ShoppingList is a class that saves a list of items and how many there are. It is possible to get this information using getter functions.
 
 
