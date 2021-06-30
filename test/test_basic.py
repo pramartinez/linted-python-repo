@@ -2,9 +2,9 @@
 Very basic module to test infrastructure
 '''
 from unittest import TestCase
-from fuu import Foo
+from fuu import class ShoppingList:
 
-BAR = "bar"
+ITEMS = ["bread", "water", "cheese"]
 
 
 class BasicTest(TestCase):
@@ -13,12 +13,12 @@ class BasicTest(TestCase):
     '''
 
     def setUp(self) -> None:
-        self.to_test = Foo()
+        self.to_test = ShoppingList()
 
     def test_different_args(self):
         '''
         tests if it gets whatever is used to initialize
         '''
         assert self.to_test.args() == ()
-        assert Foo(BAR).args() == (BAR,)
-        assert Foo(BAR).first_arg() == BAR
+        assert ShoppingList(ITEMS).args() == ITEMS
+        assert ShoppingList(ITEMS).first_arg() == ITEMS[0]
