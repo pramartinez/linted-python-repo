@@ -4,7 +4,9 @@ Very basic module to test infrastructure
 from unittest import TestCase
 from fuu import ShoppingList
 
-ITEMS = ("bread", "water", "cheese")
+ITEM1 = "bread"
+ITEM2 = "water"
+ITEM3 = "cheese"
 
 class BasicTest(TestCase):
     '''
@@ -19,5 +21,5 @@ class BasicTest(TestCase):
         tests if it gets whatever is used to initialize
         '''
         assert self.to_test.args() == ()
-        assert ShoppingList(ITEMS).args() == (ITEMS,)
-        assert ShoppingList(ITEMS).first_arg() == ITEMS[0]
+        assert ShoppingList(ITEM1, ITEM2, ITEM3).args() == (ITEM1, ITEM2, ITEM3,)
+        assert ShoppingList(ITEM1, ITEM2, ITEM3).first_arg() == ITEM1
