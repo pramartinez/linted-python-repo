@@ -1,0 +1,34 @@
+name: Test Python
+on:
+  push:
+    paths:
+      - "**/*.py"
+      - "pyproject.toml"
+      - "poetry.lock"
+  pull_request:
+    paths:
+      - "**/*.py"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install requirements
+      run: |
+        pip install poetry
+        poetry install
+
+    - name: Run linter
+      run: |
+        poetry run pylint test/*.py fuu/*.py
+
+    - name: Run tests
+      run: |
+        poetry run pytest
