@@ -23,3 +23,4 @@ class BasicTest(TestCase):
         assert self.to_test.args() == ()
         assert ShoppingList(ITEM1, ITEM2, ITEM3).args() == (ITEM1, ITEM2, ITEM3,)
         assert ShoppingList(ITEM1, ITEM2, ITEM3).first_arg() == ITEM1
+        assert ShoppingList(ITEM1, ITEM2, ITEM3).list_length() == 3
