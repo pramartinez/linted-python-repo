@@ -4,8 +4,7 @@ Very basic module to test infrastructure
 from unittest import TestCase
 from fuu import ShoppingList
 
-ITEMS = ["bread", "water", "cheese"]
-
+ITEMS = ("bread", "water", "cheese")
 
 class BasicTest(TestCase):
     '''
