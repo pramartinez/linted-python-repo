@@ -16,7 +16,7 @@ class ShoppingList:
         Getter. It returns the list of items
         '''
         return self.items
-    
+
     def list_length(self):
         '''
         Getter. It returns the number of items
