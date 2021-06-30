@@ -20,5 +20,5 @@ class BasicTest(TestCase):
         tests if it gets whatever is used to initialize
         '''
         assert self.to_test.args() == ()
-        assert ShoppingList(ITEMS).args() == ITEMS
+        assert ShoppingList(ITEMS).args() == (ITEMS,)
         assert ShoppingList(ITEMS).first_arg() == ITEMS[0]
