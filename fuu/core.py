@@ -3,22 +3,13 @@ Implements a boilerplate clas
 '''
 
 
-class Foo:
-    '''
-    World famous Foo class by any other name
-    '''
-
+class ShoppingList:
     def __init__(self, *args):
-        self._args = args
+        self.items = args
+        self.nitems = len(args)
 
     def args(self):
-        '''
-        getter function
-        '''
-        return self._args
+        return self.items
 
     def first_arg(self):
-        '''
-        Possibly we're only interested in this
-        '''
-        return self._args[0]
+        return self.items[0]
