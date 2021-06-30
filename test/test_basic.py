@@ -2,7 +2,7 @@
 Very basic module to test infrastructure
 '''
 from unittest import TestCase
-from fuu import class ShoppingList
+from fuu import ShoppingList
 
 ITEMS = ["bread", "water", "cheese"]
 
