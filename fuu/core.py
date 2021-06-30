@@ -1,5 +1,5 @@
 '''
-Implements a boilerplate clas
+Implements a boilerplate class
 '''
 
 
@@ -13,7 +13,7 @@ class ShoppingList:
 
     def args(self):
         '''
-        Getter 
+        Getter. It returns the list of items
         '''
         return self.items
 
